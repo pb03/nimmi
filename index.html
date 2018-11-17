@@ -1,50 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" href="dist/main.css">
-	</head>
 
-	<body id="body">
-		<div id="container">
-			<video
-				id="default"
-				src="./assets/videos/aja.mp4"
-				type="video/mp4"
-				loop>
-			</video>
-			<video
-				id="look"
-				src="./assets/videos/look.mp4"
-				type="video/mp4"
-				onended="onReset()">
-			</video>
-			<video
-				id="smile"
-				src="./assets/videos/smile.mp4"
-				type="video/mp4" muted>
-			</video>
-			<video
-				id="ssa"
-				src="./assets/videos/ssa.mp4"
-				type="video/mp4">
-			</video>
-			<video
-				id="song1"
-				src="./assets/videos/song1.mp4"
-				type="video/mp4"
-				onended="onReset()">
-			</video>
-			<video
-				id="spSong"
-				src="./assets/videos/spSong.mp4"
-				type="video/mp4"
-				onended="onReset()">
-			</video>
-    </div>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./main.css">
+	<title>Nimmi</title>
+</head>
 
-		<script src="dist/main.js"></script>
-	</body>
+<body id="body">
+	<div id="container">
+		<video id="default" src="./assets/videos/default.mp4" type="video/mp4" loop>
+		</video>
+		<video id="look" src="./assets/videos/look.mp4" type="video/mp4" onended="doAction('default')">
+		</video>
+		<video id="smile" src="./assets/videos/smile.mp4" type="video/mp4" muted>
+		</video>
+		<video id="ssa" src="./assets/videos/ssa.mp4" type="video/mp4">
+		</video>
+		<video id="song1" src="./assets/videos/song1.mp4" type="video/mp4" onended="doAction('default')">
+		</video>
+		<video id="spSong" src="./assets/videos/spSong.mp4" type="video/mp4" onended="doAction('default')">
+		</video>
+	</div>
+
+	<script src="./main.js"></script>
+</body>
+
 </html>
